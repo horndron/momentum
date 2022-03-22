@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>momentum</title>
+</head>
+<body>
+  <header class="header">
+    <div class="player" id="audioplayer">
+      <div class="player-controls">
+        <button class="play-prev player-icon"></button>
+        <button class="play player-icon"></button>
+        <button class="play-next player-icon"></button>
+      </div>
+      <div class="range">
+        <p class="track-title"></p>
+        <p class="time-duration">
+          <span class="current-time">0:00</span> / 
+          <span class="duration">0:00</span>
+        </p>
+        <div class="volume-container">
+          <div class="volume-btn">
+            <button class="volume-icon"></button>
+          </div>
+          <div class="volume-slider">
+            <div class="volume-percentage"></div>
+          </div>
+        </div>
+
+        <label for="progress">
+          <input type="range" name="progress" id="progress" value="0" min="0" max="1">
+        </label>
+        
+      </div>
+      <ul class="play-list"></ul>
+    </div>
+    <!-- <div class="lang-container">
+      <button class="lang en current">en</button>
+      <span> | </span>
+      <button class="lang ru">ru</button>
+    </div> -->
+    <div class="weather" id="weather">
+      <input type="text" class="city"/>
+      <i class="weather-icon owf"></i>
+      <div class="weather-error"></div>
+      <div class="description-container">
+        <span class="temperature"></span>
+        <span class="weather-description"></span>
+      </div>
+      <div class="wind"></div>
+      <div class="humidity"></div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slide-prev slider-icon"></button>
+      <button class="slide-next slider-icon"></button>
+    </div>
+    <time class="time" id="time"></time>
+    <date class="date" id="date"></date>
+    <div class="greeting-container" id="greeting">
+      <span class="greeting"></span>
+      <input type="text" class="name" placeholder="[Enter name]"/>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="setting-container">
+      <div class="setting-window">
+
+        <div class="change-lang">
+          <p class="choose-lang-label"></p>
+          <div class="btn-container">
+            <input type="radio" id="en" name="lang" value="en" checked>
+            <label class="lang en current" for="en">en</label>
+            
+            <input type="radio" id="ru" name="lang" value="ru">
+            <label class="lang ru" for="ru">ru</label>
+          </div>
+        </div>
+
+        <div class="change-source-img">
+          <p class="source-label"></p>
+          <div class="btn-container">
+            <input type="radio" id="gitHub" name="sourceimg" value="gitHub" checked>
+            <label class="lang en current" for="gitHub">GitHub</label>
+            
+            <input type="radio" id="unsplash" name="sourceimg" value="unsplash">
+            <label class="lang ru" for="unsplash">Unsplash</label>
+
+            <input type="radio" id="flickr" name="sourceimg" value="flickr">
+            <label class="lang ru" for="flickr">Flickr</label>
+
+            <input type="text" id="tag-image" placeholder="">
+          </div>
+        </div>
+
+        <div class="hide-blocks">
+          <p class="hide-blocks-label"></p>
+          <div class="btn-container">
+            <label class="hide-audioplayer"><input type="checkbox" name="hideblocks" value="audioplayer"><span></span></label>
+            <label class="hide-weather"><input type="checkbox" name="hideblocks" value="weather"><span></span></label>
+            <label class="hide-time"><input type="checkbox" name="hideblocks" value="time"><span></span></label>
+            <label class="hide-date"><input type="checkbox" name="hideblocks" value="date"><span></span></label>
+            <label class="hide-greeting"><input type="checkbox" name="hideblocks" value="greeting"><span></span></label>
+            <label class="hide-quotes"><input type="checkbox" name="hideblocks" value="quotes"><span></span></label>
+            <label class="hide-todo"><input type="checkbox" name="hideblocks" value="todo"><span></span></label>
+          </div>
+        </div>
+
+      </div>
+      <button class="setting"></button>
+    </div>
+    <div class="quotes" id="quotes">
+      <button class="change-quote"></button>
+      <div>
+        <div class="quote"></div>
+        <div class="author"></div>
+      </div>
+    </div>
+    <div class="todo-container" id="todo">
+      <div class="todo-window">
+        <p class="today-todo"></p>
+        <div class="todo-list"></div>
+        <input type="text" placeholder="" id="todo-new">
+      </div>
+      <button class="todo-btn"></button>
+    </div>
+  </footer>
+  <script type="module" src="js/script.js"></script>
+</body>
+</html>
