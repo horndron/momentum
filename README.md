@@ -15,4 +15,4 @@
 - деление js-кода на модули;
 - работа с асинхронными запросами. 
 
-![screenshot](../images/momentum.png)
+![image](https://user-images.githubusercontent.com/89828396/159527052-171392fa-2cb7-4fac-a7d1-8e3abf088148.png)
